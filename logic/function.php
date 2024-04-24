@@ -20,4 +20,3 @@ function fourRandomBabyMonsters($babyMonstersArr) {
 
     return $randomBabyMonsters;
 }
-
