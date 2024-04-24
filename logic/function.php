@@ -1,22 +1,20 @@
 <?php
-
-function getBabyMonster($monsterBaby) {
+function getBabyMonsterJson($monsterBaby) {
 
     return json_encode($monsterBaby);
 }
 
-function getAllBabyMonsters($babyMonstersArr) {
+function getAllBabyMonstersJson($babyMonstersArr) {
     $babyMonsterInJson = [];
 
     foreach($babyMonstersArr as $babyMonster) {
-        $babyMonsterInJson [] = json_encode($babyMonster);
+        $babyMonsterInJson [] = getBabyMonsterJson($babyMonster);
     }
 
     return $babyMonsterInJson;
 }
 
 function fourRandomBabyMonsters($babyMonstersArr) {
-    $randomBabyMonsters[] = array_rand($babyMonstersArr, 4);
 
-    return $randomBabyMonsters;
+    return array_rand($babyMonstersArr, 4);
 }
