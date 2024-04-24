@@ -16,15 +16,8 @@ function getAllBabyMonsters($babyMonstersArr) {
 }
 
 function fourRandomBabyMonsters($babyMonstersArr) {
-    $countBabies = count($babyMonstersArr);
+    $randomBabyMonsters[] = array_rand($babyMonstersArr, 4);
 
-    $randomBabyMonsters = [];
-
-    for($index = 0; $index < $countBabies; $index++) {
-        $randomIndex = array_rand($babyMonstersArr, 4);
-
-        $randomBabyMonsters = $babyMonstersArr[$randomIndex];
-    }
     return $randomBabyMonsters;
 }
 
